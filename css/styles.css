@@ -279,3 +279,33 @@ button {
     transform: rotate(360deg);
   }
 }
+
+/* .panel2,
+.panel3,
+.panel4,
+.panel5 {
+  display: none;
+} */
+
+/* .card-open, #patient-profile .panel-tabs, #patient-profile .panel-block { */
+  /* display: none; */
+/* } */
+
+/* Card toggle: hide the open arrow on load */
+/* button span:first-of-type{
+  display: none;
+} */
+
+.tab-panel,
+.hide {
+  display: none;
+}
+
+/* .tab-default, */
+.show {
+  display: contents;
+}
+
+.half-width {
+  width: 50%;
+}
