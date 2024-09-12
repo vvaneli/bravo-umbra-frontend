@@ -296,6 +296,15 @@ button {
   display: none;
 } */
 
+/* CARD TAB STYLES */
+
+.panel-tabs a {
+border-bottom: 3px solid rgba(0,0,0,0);
+}
+/* .panel-tabs a.is-active { */
+/* border-bottom: 3px solid; */
+/* } */
+
 .tab-panel,
 .hide {
   display: none;

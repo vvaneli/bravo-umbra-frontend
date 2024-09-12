@@ -38,50 +38,41 @@ show .card-close
 // if (cardPatientProfileToggleUp ===
 // window.alert('yes')
 
-//? On page load
+//? ON PAGE LOAD
 
 function onPageLoad() {
+  // append class .is-active to the first tab of every card
+  const tabIsActive = document.querySelectorAll('nav.panel-tabs')
+  for (let t = 0; t < tabIsActive.length; t++) {
+    tabIsActive[t].firstElementChild.classList.add('is-active')
+  }
+  // show the contents of the first tab of every card
   const tabDefault = document.querySelectorAll('.tab-default')
   for (let i = 0; i < tabDefault.length; i++) {
     tabDefault[i].style.display = 'contents'
   }
 }
-onPageLoad()
 // Card toggle: hide the open arrow
 // cardPatientProfileToggleDown.classList.toggle('hide')
 
 function cardToggle(e) {
-  e.classList.toggle("hide")
+  e.classList.toggle('hide')
   // cardPatientProfileToggleUp.classList.toggle('hide')
   // cardPatientProfileToggleDown.classList.toggle('show')
 }
 
-// function cardPatientProfileToggle() {
-//   cardPatientProfileToggleDown.classList.toggle('show')
-//   cardPatientProfileToggleUp.classList.toggle('hide')
-//   cardPatientProfileBody.classList.toggle('hide')
-// }
+//? CARDS: TAB FUNCTION
 
-// function cardPatientProfileTab1() {
-//   cardPatientProfilePanel1.classList.toggle('show')
-//   cardPatientProfilePanel2.classList.toggle('hide')
-//   cardPatientProfilePanel3.classList.toggle('hide')
-// }
-
-// function cardPatientProfileTab2() {
-//   cardPatientProfilePanel1.classList.toggle('hide')
-//   cardPatientProfilePanel2.classList.toggle('show')
-//   cardPatientProfilePanel3.classList.toggle('hide')
-// }
-
-// function cardPatientProfileTab3() {
-//   cardPatientProfilePanel1.classList.toggle('hide')
-//   cardPatientProfilePanel2.classList.toggle('hide')
-//   cardPatientProfilePanel3.classList.toggle('show')
-// }
-
-// CSS Escape https://drafts.csswg.org/cssom/#the-css.escape%28%29-method
-function openPanel(tabName, tabGroup) {
+function openPanel(tabName, tabGroup, el) {
+  // highlight the active tab
+  const tabList = el.parentElement.children
+  for (let t = 0; t < tabList.length; t++) {
+    const classes = tabList[t].classList
+    classes.remove('is-active')
+  }
+  el.classList.add('is-active')
+  // show the active panel
+  // CSS Escape https://drafts.csswg.org/cssom/#the-css.escape%28%29-method
   const tabPanels = document.querySelectorAll('.' + CSS.escape(tabGroup))
   for (let i = 0; i < tabPanels.length; i++) {
     tabPanels[i].style.display = 'none'
