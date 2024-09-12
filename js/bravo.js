@@ -64,6 +64,7 @@ function cardToggle(e) {
 //? CARDS: TAB FUNCTION
 
 function openPanel(tabName, tabGroup, el) {
+
   // highlight the active tab
   const tabList = el.parentElement.children
   for (let t = 0; t < tabList.length; t++) {
@@ -71,6 +72,7 @@ function openPanel(tabName, tabGroup, el) {
     classes.remove('is-active')
   }
   el.classList.add('is-active')
+
   // show the active panel
   // CSS Escape https://drafts.csswg.org/cssom/#the-css.escape%28%29-method
   const tabPanels = document.querySelectorAll('.' + CSS.escape(tabGroup))

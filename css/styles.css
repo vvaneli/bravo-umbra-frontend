@@ -24,6 +24,10 @@
   height: 0.5em;
 } */
 
+.is-5 {
+  margin-top: 1.5em;
+  border-bottom: 1px dotted grey;
+}
 textarea {
   width: 100%;
 }
@@ -297,6 +301,10 @@ button {
 } */
 
 /* CARD TAB STYLES */
+
+.panel-tabs {
+margin-bottom: 1em;
+}
 
 .panel-tabs a {
 border-bottom: 3px solid rgba(0,0,0,0);

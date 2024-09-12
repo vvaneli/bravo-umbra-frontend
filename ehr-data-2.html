@@ -93,7 +93,7 @@
             </nav>
             <div class="panel-block column">
               <section id="patientProfileTab1" class="patientProfile tab-panel tab-default">
-                <h4 class="title is-4">Profile</h4>
+                <h3 class="title is-4">Profile</h3>
                 <p class="Age"><span class="data">5</span></p>
                 <p class="DateOfBirth"><span class="data">2019-06-01</span></p>
                 <p class="Gender"><span class="data">Female</span></p>
@@ -101,14 +101,14 @@
                 <button class="button is-light">Edit</button>
               </section>
               <section id="patientProfileTab2" class="patientProfile tab-panel">
-                <h5 class="title is-5">Emergency contact</h5>
+                <h3 class="title is-4">Emergency contact</h3>
                 <p class="EmergencyContact-Name"><span class="data">Anna Mooij</span></p>
                 <p class="EmergencyContact-Relation"><span class="data">Mother</span></p>
                 <p class="EmergencyContact-PhoneNumber"><span class="data">+31 6 98765432</span></p>
                 <button class="button is-light">Edit</button>
               </section>
               <section id="patientProfileTab3" class="patientProfile tab-panel">
-                <h4 class="title is-4">Personalizations</h4>
+                <h3 class="title is-4">Personalizations</h3>
                 <p class="FavoriteToy"><span class="data">A soft rabbit called Raggy.</span></p>
                 <button class="button is-light">Edit</button>
               </section>
@@ -136,12 +136,11 @@
             </nav>
             <div class="panel-block column">
               <section id="medicalProfileTab1" class="column medicalProfile tab-panel tab-default">
-              <!-- <section class="section tab json medical-history"> -->
                 <!-- <h3 class="title is-3">Current</h3> -->
                 <!-- JSON: MedicalHistory -->
-                <h4 class="title is-4">Current Medications</h4>
+                <h3 class="title is-4">Current Medications</h3>
                 <p class="CurrentMedications"></p>
-                <h4 class="title is-4">Allergies</h4>
+                <h3 class="title is-4">Allergies</h3>
                 <p class="Allergies-Allergen"><span class="data">Peanuts</span></p>
                 <p class="Allergies-Reaction"><span class="data">Hives</span></p>
                 <p class="Allergies-Allergen"><span class="data">Penicillin</span></p>
@@ -149,14 +148,14 @@
                 <button class="button is-light">Edit</button>
               </section>
               <section id="medicalProfileTab2" class="column medicalProfile tab-panel">
-              <!-- <section class="section tab json medical-history"> -->
+                <!-- <section class="section tab json medical-history"> -->
                 <!-- <h3 class="title is-3">History</h3> -->
                 <!-- JSON: MedicalHistory -->
-                <h4 class="title is-4">Past Illnesses</h4>
+                <h3 class="title is-4">Past Illnesses</h3>
                 <p class="PastIllnesses-Year"><span class="data">2022</span></p>
                 <p class="PastIllnesses-Illness"><span class="data">Chickenpox</span></p>
                 <button class="button is-light">More</button>
-                <h4 class="title is-4">Family History</h4>
+                <h3 class="title is-4">Family History</h3>
                 <p class="FamilyHistory-Relation"><span class="data">Father</span></p>
                 <p class="FamilyHistory-Condition"><span class="data">Hypertension</span></p>
                 <p class="FamilyHistory-Relation"><span class="data">Mother</span></p>
@@ -184,87 +183,85 @@
             </span>
           </button>
         </header>
-
-        <p class="panel-tabs">
-          <a class="is-active">Current</a>
-          <a>Upcoming</a>
-          <a>Past</a>
-        </p>
-
-        <div class="panel-block">
-          <section class="section columns tab json consultation">
-            <!-- <h3>Consultation</h3> -->
-            <div class="column">
-              <h4 class="title is-4">Consultation</h4>
-              <!-- JSON: VisitInformation -->
-              <p class="VisitDate"><span class="data">2024-08-10</span></p>
-              <p class="ReasonForVisit"><span class="data">Broken Shoulder</span></p>
-              <p class="VisitID"><span class="data">V789101112</span></p>
-              <p class="PrimaryPhysician"><span class="data">Dr. Sarah Jansen</span></p>
-              <button class="button is-light">Edit</button>
-              <!-- </div> -->
-              <!-- <div class="column"> -->
-              <h4 class="title is-4">Diagnosis</h4>
-              <!-- JSON: Diagnosis -->
-              <p class="AffectedSide"><span class="data">Left Shoulder</span></p>
-              <p class="Severity"><span class="data">Moderate</span></p>
-              <p class="DiagnosisDescription"><span class="data">Fracture of shoulder, unspecified, initial
-                  encounter</span></p>
-              <p class="DiagnosisCode"><span class="data">S42.009A</span></p>
-              <button class="button is-light">Edit</button>
-            </div>
-            <div class="column">
-              <h4 class="title is-4">Treatment Plan</h4>
-              <!-- JSON: TreatmentPlan -->
-              <h5 class="title is-5">Procedures</h5>
-              <p class="Treatment-Date"><span class="data">2024-08-10</span></p>
-              <p class="Treatment-Procedure"><span class="data">X-ray of shoulder</span></p>
-              <p class="Treatment-Result"><span class="data">Fracture Confirmed</span></p>
-              <p class="Treatment-Procedure"><span class="data">Immobilization</span></p>
-              <p class="Treatment-Result"><span class="data">Shoulder sling</span></p>
-              <p class="Treatment-Procedure"><span class="data">Pain Management</span></p>
-              <p class="Treatment-Medication"><span class="data">Ibuprofen 200mg</span></p>
-              <h5 class="title is-5">FollowUp</h5>
-              <p class="FollowUp-Date"><span class="data">2024-08-17</span></p>
-              <p class="FollowUp-Purpose"><span class="data">Check healing progress, adjust sling if necessary</span>
-              </p>
-              <h5 class="title is-5">Notes</h5>
-              <p class="TreatmentPlan-Notes"><span class="data">Patient advised to avoid physical activities for 6
-                  weeks. Follow up with orthopedic specialist if pain persists.</span></p>
-              <button class="button is-light">Edit</button>
-            </div>
-            <div class="column">
-              <h4 class="title is-4">Billing</h4>
-              <!-- JSON: BillingInformation -->
-              <p class="TotalCost"><span class="data">€350.00</span></p>
-              <p class="PaymentStatus"><span class="data">Pending</span></p>
-              <p class="InsuranceProvider"><span class="data">Allianz Health Insurance</span></p>
-              <p class="PolicyNumber"><span class="data">NL4567890123</span></p>
-              <p class="BillingCode"><span class="data">99203</span></p>
-              <button class="button is-light">Edit</button>
-            </div>
-          </section>
-          <section class="section tab json visit-information">
-            <h3 class="title is-3">Upcoming appointments</h3>
-            <!-- JSON: TreatmentPlan > FollowUp -->
-            <!-- <h4 class="title is-4">Upcoming</h4> -->
-            <section class="section FollowUp">
-              <p class="Treatment-Date"><span class="data">2024-08-17</span></p>
-              <p class="Treatment-Procedure"><span class="data">X-ray of Shoulder</span></p>
-              <p class="Treatment-Purpose"><span class="data">Check healing progress, adjust sling if necessary</span>
-              </p>
-              <button class="button is-light">Edit</button>
+        <section id="medical-profile-card-body">
+          <nav class="panel-tabs">
+            <a onClick="openPanel('consultationTab1', 'consultation', this)" class="tab">Current</a>
+            <a onClick="openPanel('consultationTab2', 'consultation', this)" class="tab">Upcoming</a>
+            <a onClick="openPanel('consultationTab3', 'consultation', this)" class="tab">Past</a>
+          </nav>
+          <div class="panel-block column">
+            <section id="consultationTab1" class="columns consultation tab-panel tab-default">
+              <div class="columns">
+                <div class="column">
+                <h3 class="title is-4">Consultation</h3>
+                <!-- JSON: VisitInformation -->
+                <p class="VisitDate"><span class="data">2024-08-10</span></p>
+                <p class="ReasonForVisit"><span class="data">Broken Shoulder</span></p>
+                <p class="VisitID"><span class="data">V789101112</span></p>
+                <p class="PrimaryPhysician"><span class="data">Dr. Sarah Jansen</span></p>
+                <button class="button is-light">Edit</button>
+                </div>
+                <div class="column">
+                <h3 class="title is-4">Diagnosis</h3>
+                <!-- JSON: Diagnosis -->
+                <p class="AffectedSide"><span class="data">Left Shoulder</span></p>
+                <p class="Severity"><span class="data">Moderate</span></p>
+                <p class="DiagnosisDescription"><span class="data">Fracture of shoulder, unspecified, initial
+                    encounter</span></p>
+                <p class="DiagnosisCode"><span class="data">S42.009A</span></p>
+                <button class="button is-light">Edit</button>
+              </div>
+              <div class="column">
+                <h3 class="title is-4">Treatment Plan</h3>
+                <!-- JSON: TreatmentPlan -->
+                <h4 class="title is-5">Procedures</h4>
+                <p class="Treatment-Date"><span class="data">2024-08-10</span></p>
+                <p class="Treatment-Procedure"><span class="data">X-ray of shoulder</span></p>
+                <p class="Treatment-Result"><span class="data">Fracture Confirmed</span></p>
+                <p class="Treatment-Procedure"><span class="data">Immobilization</span></p>
+                <p class="Treatment-Result"><span class="data">Shoulder sling</span></p>
+                <p class="Treatment-Procedure"><span class="data">Pain Management</span></p>
+                <p class="Treatment-Medication"><span class="data">Ibuprofen 200mg</span></p>
+                <h4 class="title is-5">FollowUp</h4>
+                <p class="FollowUp-Date"><span class="data">2024-08-17</span></p>
+                <p class="FollowUp-Purpose"><span class="data">Check healing progress, adjust sling if necessary</span>
+                </p>
+                <h4 class="title is-5">Notes</h4>
+                <p class="TreatmentPlan-Notes"><span class="data">Patient advised to avoid physical activities for 6
+                    weeks. Follow up with orthopedic specialist if pain persists.</span></p>
+                <button class="button is-light">Edit</button>
+              </div>
+              <div class="column">
+                <h4 class="title is-4">Billing</h4>
+                <!-- JSON: BillingInformation -->
+                <p class="TotalCost"><span class="data">€350.00</span></p>
+                <p class="PaymentStatus"><span class="data">Pending</span></p>
+                <p class="InsuranceProvider"><span class="data">Allianz Health Insurance</span></p>
+                <p class="PolicyNumber"><span class="data">NL4567890123</span></p>
+                <p class="BillingCode"><span class="data">99203</span></p>
+                <button class="button is-light">Edit</button>
+              </div>
             </section>
-            <button class="button is-light">Add new</button>
-          </section>
-          <section class="section tab json visit-information">
-            <h3 class="title is-3">Past appointments</h3>
-            <!-- JSON: MedicalHistory -->
-            <p class="PastIllnesses-Year"><span class="data">2022</span></p>
-            <p class="PastIllnesses-Illness"><span class="data">Chickenpox</span></p>
-            <button class="button is-light">More</button>
-          </section>
-        </div>
+            <section id="consultationTab2" class="column consultation tab-panel">
+              <h3 class="title is-4 FollowUp">Upcoming appointments</h3>
+              <!-- JSON: TreatmentPlan > FollowUp -->
+                <p class="Treatment-Date"><span class="data">2024-08-17</span></p>
+                <p class="Treatment-Procedure"><span class="data">X-ray of Shoulder</span></p>
+                <p class="Treatment-Purpose"><span class="data">Check healing progress, adjust sling if necessary</span>
+                </p>
+                <button class="button is-light">Edit</button>
+                <hr />
+              <button class="button is-light">Add new</button>
+            </section>
+            <section id="consultationTab3" class="column consultation tab-panel">
+              <h3 class="title is-4">Past appointments</h3>
+              <!-- JSON: MedicalHistory -->
+              <p class="PastIllnesses-Year"><span class="data">2022</span></p>
+              <p class="PastIllnesses-Illness"><span class="data">Chickenpox</span></p>
+              <button class="button is-light">More</button>
+            </section>
+          </div>
+        </section>
       </article>
       <!-- BLOCK 2: END -->
 
