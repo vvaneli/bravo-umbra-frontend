@@ -139,7 +139,8 @@
                 <!-- <h3 class="title is-3">Current</h3> -->
                 <!-- JSON: MedicalHistory -->
                 <h3 class="title is-4">Current Medications</h3>
-                <p class="CurrentMedications"></p>
+                <p class="CurrentMedications"><span class="data">Ibuprofen 200mg</span></p>
+                <br />
                 <h3 class="title is-4">Allergies</h3>
                 <p class="Allergies-Allergen"><span class="data">Peanuts</span></p>
                 <p class="Allergies-Reaction"><span class="data">Hives</span></p>
@@ -171,7 +172,6 @@
 
       <!-- BLOCK 2 CONSULTATION: START -->
       <article class="card panel is-link ml-3 mb-3">
-
         <header class="card-header panel-heading">
           <h2 class="card-header-title has-text-white">Consultations</h2>
           <button class="card-header-icon" aria-label="more options">
@@ -193,65 +193,67 @@
             <section id="consultationTab1" class="columns consultation tab-panel tab-default">
               <div class="columns">
                 <div class="column">
-                <h3 class="title is-4">Consultation</h3>
-                <!-- JSON: VisitInformation -->
-                <p class="VisitDate"><span class="data">2024-08-10</span></p>
-                <p class="ReasonForVisit"><span class="data">Broken Shoulder</span></p>
-                <p class="VisitID"><span class="data">V789101112</span></p>
-                <p class="PrimaryPhysician"><span class="data">Dr. Sarah Jansen</span></p>
-                <button class="button is-light">Edit</button>
+                  <h3 class="title is-4">Consultation</h3>
+                  <!-- JSON: VisitInformation -->
+                  <p class="VisitDate"><span class="data">2024-08-10</span></p>
+                  <p class="ReasonForVisit"><span class="data">Broken Shoulder</span></p>
+                  <p class="VisitID"><span class="data">V789101112</span></p>
+                  <p class="PrimaryPhysician"><span class="data">Dr. Sarah Jansen</span></p>
+                  <button class="button is-light">Edit</button>
                 </div>
                 <div class="column">
-                <h3 class="title is-4">Diagnosis</h3>
-                <!-- JSON: Diagnosis -->
-                <p class="AffectedSide"><span class="data">Left Shoulder</span></p>
-                <p class="Severity"><span class="data">Moderate</span></p>
-                <p class="DiagnosisDescription"><span class="data">Fracture of shoulder, unspecified, initial
-                    encounter</span></p>
-                <p class="DiagnosisCode"><span class="data">S42.009A</span></p>
-                <button class="button is-light">Edit</button>
-              </div>
-              <div class="column">
-                <h3 class="title is-4">Treatment Plan</h3>
-                <!-- JSON: TreatmentPlan -->
-                <h4 class="title is-5">Procedures</h4>
-                <p class="Treatment-Date"><span class="data">2024-08-10</span></p>
-                <p class="Treatment-Procedure"><span class="data">X-ray of shoulder</span></p>
-                <p class="Treatment-Result"><span class="data">Fracture Confirmed</span></p>
-                <p class="Treatment-Procedure"><span class="data">Immobilization</span></p>
-                <p class="Treatment-Result"><span class="data">Shoulder sling</span></p>
-                <p class="Treatment-Procedure"><span class="data">Pain Management</span></p>
-                <p class="Treatment-Medication"><span class="data">Ibuprofen 200mg</span></p>
-                <h4 class="title is-5">FollowUp</h4>
-                <p class="FollowUp-Date"><span class="data">2024-08-17</span></p>
-                <p class="FollowUp-Purpose"><span class="data">Check healing progress, adjust sling if necessary</span>
-                </p>
-                <h4 class="title is-5">Notes</h4>
-                <p class="TreatmentPlan-Notes"><span class="data">Patient advised to avoid physical activities for 6
-                    weeks. Follow up with orthopedic specialist if pain persists.</span></p>
-                <button class="button is-light">Edit</button>
-              </div>
-              <div class="column">
-                <h4 class="title is-4">Billing</h4>
-                <!-- JSON: BillingInformation -->
-                <p class="TotalCost"><span class="data">€350.00</span></p>
-                <p class="PaymentStatus"><span class="data">Pending</span></p>
-                <p class="InsuranceProvider"><span class="data">Allianz Health Insurance</span></p>
-                <p class="PolicyNumber"><span class="data">NL4567890123</span></p>
-                <p class="BillingCode"><span class="data">99203</span></p>
-                <button class="button is-light">Edit</button>
-              </div>
+                  <h3 class="title is-4">Diagnosis</h3>
+                  <!-- JSON: Diagnosis -->
+                  <p class="AffectedSide"><span class="data">Left Shoulder</span></p>
+                  <p class="Severity"><span class="data">Moderate</span></p>
+                  <p class="DiagnosisDescription"><span class="data">Fracture of shoulder, unspecified, initial
+                      encounter</span></p>
+                  <p class="DiagnosisCode"><span class="data">S42.009A</span></p>
+                  <button class="button is-light">Edit</button>
+                </div>
+                <div class="column">
+                  <h3 class="title is-4">Treatment Plan</h3>
+                  <!-- JSON: TreatmentPlan -->
+                  <h4 class="title is-5">Procedures</h4>
+                  <p class="Treatment-Date"><span class="data">2024-08-10</span></p>
+                  <p class="Treatment-Procedure"><span class="data">X-ray of shoulder</span></p>
+                  <p class="Treatment-Result"><span class="data">Fracture Confirmed</span></p>
+                  <p class="Treatment-Procedure"><span class="data">Immobilization</span></p>
+                  <p class="Treatment-Result"><span class="data">Shoulder sling</span></p>
+                  <p class="Treatment-Procedure"><span class="data">Pain Management</span></p>
+                  <p class="Treatment-Medication"><span class="data">Ibuprofen 200mg</span></p>
+                  <h4 class="title is-5">FollowUp</h4>
+                  <p class="FollowUp-Date"><span class="data">2024-08-17</span></p>
+                  <p class="FollowUp-Purpose"><span class="data">Check healing progress, adjust sling if
+                      necessary</span>
+                  </p>
+                  <h4 class="title is-5">Notes</h4>
+                  <p class="TreatmentPlan-Notes"><span class="data">Patient advised to avoid physical activities for 6
+                      weeks. Follow up with orthopedic specialist if pain persists.</span></p>
+                  <button class="button is-light">Edit</button>
+                </div>
+                <div class="column">
+                  <h4 class="title is-4">Billing</h4>
+                  <!-- JSON: BillingInformation -->
+                  <p class="TotalCost"><span class="data">€350.00</span></p>
+                  <p class="PaymentStatus"><span class="data">Pending</span></p>
+                  <p class="InsuranceProvider"><span class="data">Allianz Health Insurance</span></p>
+                  <p class="PolicyNumber"><span class="data">NL4567890123</span></p>
+                  <p class="BillingCode"><span class="data">99203</span></p>
+                  <button class="button is-light">Edit</button>
+                </div>
             </section>
             <section id="consultationTab2" class="column consultation tab-panel">
               <h3 class="title is-4 FollowUp">Upcoming appointments</h3>
               <!-- JSON: TreatmentPlan > FollowUp -->
-                <p class="Treatment-Date"><span class="data">2024-08-17</span></p>
-                <p class="Treatment-Procedure"><span class="data">X-ray of Shoulder</span></p>
-                <p class="Treatment-Purpose"><span class="data">Check healing progress, adjust sling if necessary</span>
-                </p>
-                <button class="button is-light">Edit</button>
-                <hr />
-              <button class="button is-light">Add new</button>
+              <p class="Treatment-Date"><span class="data">2024-08-17</span></p>
+              <p class="Treatment-Procedure"><span class="data">X-ray of Shoulder</span></p>
+              <p class="Treatment-Purpose"><span class="data">Check healing progress, adjust sling if necessary</span>
+              </p>
+              <button class="button is-light">More</button>
+              <footer class="card-footer">
+                <button class="button is-link">Add New</button>
+              </footer>
             </section>
             <section id="consultationTab3" class="column consultation tab-panel">
               <h3 class="title is-4">Past appointments</h3>
@@ -265,10 +267,9 @@
       </article>
       <!-- BLOCK 2: END -->
 
-      <!-- BLOCK 3: START -->
+      <!-- BLOCK 3 UMBRA: START -->
       <!-- <div class="columns ml-3 mr-3"> -->
-
-      <article class="card panel ml-3">
+      <article class="card panel ml-3 umbra-card">
         <header class="card-header panel-heading">
           <h2 class="card-header-title has-text-white">Umbra &ndash; Redact PII</h2>
           <button class="card-header-icon" aria-label="more options">
@@ -280,6 +281,31 @@
             </span>
           </button>
         </header>
+        <nav class="pagination is-centered card-footer" role="navigation" aria-label="pagination">
+          <a class="pagination-previous is-disabled" title="Step 1"><span class="material-symbols-outlined">
+              arrow_back
+            </span></a>
+          <a href="#" class="pagination-next"><span class="material-symbols-outlined">
+              arrow_forward
+            </span></a>
+          <ul class="pagination-list">
+            <li>
+              <a class="pagination-link is-current" aria-label="Step 1" aria-current="step">1</a>
+            </li>
+            <li>
+              <a href="#" class="pagination-link" aria-label="Go to step 2">2</a>
+            </li>
+            <li>
+              <a href="#" class="pagination-link" aria-label="Go to step 3">3</a>
+            </li>
+            <li>
+              <a href="#" class="pagination-link" aria-label="Go to step 4">4</a>
+            </li>
+            <li>
+              <a href="#" class="pagination-link" aria-label="Go to step 5">5</a>
+            </li>
+          </ul>
+        </nav>
         <section class="section tab" id="umbra">
           <!-- Umbra Step 1 -->
           <div class="columns">
@@ -357,6 +383,7 @@
               </div>
             </div>
           </div>
+
         </section>
       </article>
       <!-- </div> -->

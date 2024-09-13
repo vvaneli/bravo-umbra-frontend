@@ -313,9 +313,39 @@ border-bottom: 3px solid rgba(0,0,0,0);
 /* border-bottom: 3px solid; */
 /* } */
 
+.panel-block {
+  font-weight: 400;
+}
+.data {
+  font-weight: 600;
+}
+
+.consultation .card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.consultation .card-footer button {
+  margin: 1.8em 1em 1em 1em;
+}
+
 .tab-panel,
 .hide {
   display: none;
+}
+
+.umbra-card {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+.umbra-card nav.card-footer {
+  width: 100%;
+  order: 3;
+  padding: 1.5em;
+  margin: auto 0;
+
 }
 
 /* .tab-default, */
