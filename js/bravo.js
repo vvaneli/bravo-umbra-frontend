@@ -38,7 +38,11 @@ show .card-close
 // if (cardPatientProfileToggleUp ===
 // window.alert('yes')
 
-//? ON PAGE LOAD
+//? PAGE: ON LOAD
+
+// const pgPrev = document.getElementsByClassName('pagination-previous')
+const pgPrev = document.querySelector('.pagination-previous')
+const pgList = document.querySelectorAll('.pagination-link')
 
 function onPageLoad() {
   // append class .is-active to the first tab of every card
@@ -51,6 +55,14 @@ function onPageLoad() {
   for (let i = 0; i < tabDefault.length; i++) {
     tabDefault[i].style.display = 'contents'
   }
+
+  // umbra card pagination
+  pgPrev.classList.add('is-disabled')
+  pgList[0].classList.add('is-current')
+  pgList[0].classList.add('has-background-grey-dark')
+  for (let a = 1; a < pgList.length; a++) {
+    pgList[a].ariaLabel = `Go to step ${a + 1}`
+  } 
 }
 // Card toggle: hide the open arrow
 // cardPatientProfileToggleDown.classList.toggle('hide')
@@ -61,7 +73,7 @@ function cardToggle(e) {
   // cardPatientProfileToggleDown.classList.toggle('show')
 }
 
-//? CARDS: TAB FUNCTION
+//? CARDS: TAB
 
 function openPanel(tabName, tabGroup, el) {
 
@@ -80,4 +92,20 @@ function openPanel(tabName, tabGroup, el) {
     tabPanels[i].style.display = 'none'
   }
   document.getElementById(tabName).style.display = 'contents'
+}
+
+//? CARDS: PAGINATION
+let umbraCardPageCounter = 0
+
+function navPagination(pgNum, pgCard, el) {
+
+
+}
+
+function pageBack() {
+
+}
+
+function pageNext() {
+
 }

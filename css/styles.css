@@ -28,9 +28,11 @@
   margin-top: 1.5em;
   border-bottom: 1px dotted grey;
 }
+
 textarea {
   width: 100%;
 }
+
 button {
   margin-top: 1em;
   margin-bottom: 1em;
@@ -38,11 +40,11 @@ button {
 }
 
 #chatbot {
- height: 100vh;
- position: fixed;
- right: 0;
- /* bottom: 0; */
- top: 0;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  /* bottom: 0; */
+  top: 0;
 }
 
 /* FOR DATA FIELDS */
@@ -215,6 +217,10 @@ body {
   overflow: auto;
 }
 
+.data {
+  font-weight: 600;
+}
+
 .highlight {
   /* background-color: yellow; */
   background-color: black;
@@ -229,6 +235,7 @@ body {
   cursor: url('moon.png'), auto;
   /* Custom cursor on hover */
 }
+
 
 .buttons {
   display: flex;
@@ -292,7 +299,7 @@ button {
 } */
 
 /* .card-open, #patient-profile .panel-tabs, #patient-profile .panel-block { */
-  /* display: none; */
+/* display: none; */
 /* } */
 
 /* Card toggle: hide the open arrow on load */
@@ -300,24 +307,48 @@ button {
   display: none;
 } */
 
-/* CARD TAB STYLES */
+.show {
+  display: contents;
+}
+
+/* CARDS */
+
+.half-width {
+  width: 50%;
+}
+
+#umbra-card {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+#umbra-card nav.card-footer {
+  width: 100%;
+  order: 3;
+  padding: 1.5em;
+  margin: auto 0;
+}
+
+/* CARD TABS */
 
 .panel-tabs {
-margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .panel-tabs a {
-border-bottom: 3px solid rgba(0,0,0,0);
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
 }
-/* .panel-tabs a.is-active { */
-/* border-bottom: 3px solid; */
-/* } */
+
+/* CARD CONTENTS */
 
 .panel-block {
   font-weight: 400;
 }
-.data {
-  font-weight: 600;
+
+.tab-panel,
+.hide {
+  display: none;
 }
 
 .consultation .card-footer {
@@ -329,30 +360,8 @@ border-bottom: 3px solid rgba(0,0,0,0);
   margin: 1.8em 1em 1em 1em;
 }
 
-.tab-panel,
-.hide {
-  display: none;
-}
+/* CARD PAGINATION */
 
-.umbra-card {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-}
-
-.umbra-card nav.card-footer {
-  width: 100%;
-  order: 3;
-  padding: 1.5em;
-  margin: auto 0;
-
-}
-
-/* .tab-default, */
-.show {
-  display: contents;
-}
-
-.half-width {
-  width: 50%;
+.is-current {
+  border: 0;
 }

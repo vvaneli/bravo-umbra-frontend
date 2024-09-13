@@ -269,7 +269,7 @@
 
       <!-- BLOCK 3 UMBRA: START -->
       <!-- <div class="columns ml-3 mr-3"> -->
-      <article class="card panel ml-3 umbra-card">
+      <article id="umbra-card" class="card panel ml-3">
         <header class="card-header panel-heading">
           <h2 class="card-header-title has-text-white">Umbra &ndash; Redact PII</h2>
           <button class="card-header-icon" aria-label="more options">
@@ -282,27 +282,27 @@
           </button>
         </header>
         <nav class="pagination is-centered card-footer" role="navigation" aria-label="pagination">
-          <a class="pagination-previous is-disabled" title="Step 1"><span class="material-symbols-outlined">
+          <a onClick="pageBack('', '', this)" class="pagination-previous" title="Step 1"><span class="material-symbols-outlined">
               arrow_back
             </span></a>
-          <a href="#" class="pagination-next"><span class="material-symbols-outlined">
+          <a onClick="pageNext('', '', this)" class="pagination-next"><span class="material-symbols-outlined">
               arrow_forward
             </span></a>
           <ul class="pagination-list">
             <li>
-              <a class="pagination-link is-current" aria-label="Step 1" aria-current="step">1</a>
+              <a class="pagination-link" aria-label="step 1" aria-current="step">1</a>
             </li>
             <li>
-              <a href="#" class="pagination-link" aria-label="Go to step 2">2</a>
+              <a href="#" class="pagination-link" aria-label="step 3">2</a>
             </li>
             <li>
-              <a href="#" class="pagination-link" aria-label="Go to step 3">3</a>
+              <a href="#" class="pagination-link" aria-label="step 3">3</a>
             </li>
             <li>
-              <a href="#" class="pagination-link" aria-label="Go to step 4">4</a>
+              <a href="#" class="pagination-link" aria-label="step 4">4</a>
             </li>
             <li>
-              <a href="#" class="pagination-link" aria-label="Go to step 5">5</a>
+              <a href="#" class="pagination-link" aria-label="step 5">5</a>
             </li>
           </ul>
         </nav>
