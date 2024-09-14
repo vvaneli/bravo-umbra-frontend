@@ -40,9 +40,9 @@ show .card-close
 
 //? PAGE: ON LOAD
 
-// const pgPrev = document.getElementsByClassName('pagination-previous')
 const pgPrev = document.querySelector('.pagination-previous')
 const pgList = document.querySelectorAll('.pagination-link')
+const umbraSteps = document.querySelector('#umbra-card-contents').children
 
 function onPageLoad() {
   // append class .is-active to the first tab of every card
@@ -55,13 +55,17 @@ function onPageLoad() {
   for (let i = 0; i < tabDefault.length; i++) {
     tabDefault[i].style.display = 'contents'
   }
-
   // umbra card pagination
   pgPrev.classList.add('is-disabled')
   pgList[0].classList.add('is-current')
   pgList[0].classList.add('has-background-grey-dark')
   for (let a = 1; a < pgList.length; a++) {
     pgList[a].ariaLabel = `Go to step ${a + 1}`
+  }
+
+  console.log(umbraSteps)
+  for (let s = 1; s < umbraSteps.length; s++) {
+    umbraSteps[s].style.display = 'none'
   } 
 }
 // Card toggle: hide the open arrow
