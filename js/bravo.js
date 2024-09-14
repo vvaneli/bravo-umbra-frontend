@@ -4,48 +4,9 @@ const umbraSteps = document.querySelector('#umbra-card-contents').children
 const step1 = document.getElementById('step1')
 const step2 = document.getElementById('step2')
 const step3 = document.getElementById('step3')
+const box1 = document.getElementById('box1-prmpt')
 
-//? Card behaviour: Patient Profile
-
-// const cardPatientProfile = document.getElementById('patient-profile')
-// const cardPatientProfileBody = document.getElementById('patient-profile-card-body')
-// const cardPatientProfileToggleUp = document.querySelector('#patient-profile .card-close')
-// const cardPatientProfileToggleDown = document.querySelector('#patient-profile .card-open')
-// const cardPatientProfilePanel1 = document.querySelector('#patient-profile .panel1')
-// const cardPatientProfilePanel2 = document.querySelector('#patient-profile .panel2')
-// const cardPatientProfilePanel3 = document.querySelector('#patient-profile .panel3')
-
-/*
-#patient-profile
-
-tap card-toggle
-
-OPEN:
-show .card-open, .panel-tabs, .panel-block
-hide .card-close
-
-CLOSE:
-hide .card-open, .panel-tabs, .panel-block
-show .card-close
-
-*/
-
-//? Card behaviour: Medical Profile
-//  #medical-profile
-
-//? Card behaviour: Consultations
-
-//? Card behaviour: Umbra
-
-// .card-toggle
-// .card-open
-// .card-close
-
-
-// if (cardPatientProfileToggleUp ===
-// window.alert('yes')
-
-//? PAGE: ON LOAD
+//! PAGE: ON LOAD
 
 function onPageLoad() {
   // append class .is-active to the first tab of every card
@@ -87,7 +48,7 @@ function cardToggle(e) {
   // cardPatientProfileToggleDown.classList.toggle('show')
 }
 
-//? CARDS: TAB
+//! CARDS: TAB
 
 function openPanel(tabName, tabGroup, el) {
 
@@ -108,21 +69,7 @@ function openPanel(tabName, tabGroup, el) {
   document.getElementById(tabName).style.display = 'contents'
 }
 
-//? CARDS: PAGINATION
-let umbraCardPageCounter = 0
-
-function navPagination(pgNum, pgCard, el) {
-
-
-}
-
-function pageBack() {
-
-}
-
-function pageNext() {
-
-}
+//! CARD: UMBRA
 
 function goToStep1() {
   step1.style.display = 'contents'
@@ -146,6 +93,31 @@ function clearContents() {
   document.getElementById('box1-prmpt').value = ''
 }
 
+function example1 (){
+  box1.value = `Write a letter dated with today's date to {BillingInformation.InsuranceProvider} about the patient {PatientInformation.FirstName} {PatientInformation.MiddleName} {PatientInformation.LastName}; patient ID {PatientInformation.PatientID}; insurance policy number {BillingInformation.PolicyNumber}.
+1. The patient visited the hospital on {VisitInformation.VisitDate} due to a {VisitInformation.ReasonForVisit}; visit ID {VisitInformation.VisitID}.
+2. The diagnosis was a {Diagnosis.DiagnosisDescription} at the {Diagnosis.AffectedSide}, with {Diagnosis.Severity} severity; the diagnosis code is {Diagnosis.DiagnosisCode}.
+3. The recommended treatment plan is as follows:
+	a. {TreatmentPlan.Treatment[0].Procedure}
+	b. {TreatmentPlan.Treatment[1].Procedure}
+	c. {TreatmentPlan.Treatment[2].Procedure}
+4. The total cost of the treatment is {BillingInformation.TotalCost}; billing code {BillingInformation.BillingCode}.
+5. Sender of the letter is {VisitInformation.PrimaryPhysician}, {VisitInformation.Department} Department, at the Bravo Children’s Hospital`
+}
+
+function example2 (){
+  box1.value = `Write a story for a {PatientInformation.Age}-year-old child about {PatientInformation.RelatedNotes.FavoriteToy}.
+1. Use the story arc of a hero's journey.
+2. The characters in the story are gender-neutral.
+3. The story has 6 images (labeled 'image 1', 'image 2', 'image 3', 'image 4', 'image 5', 'image 6') and 6 corresponding captions (labeled 'caption 1', 'caption 2', 'caption 3', 'caption 4', 'caption 5', 'caption 6').
+4. What happens to the character in the story:
+  a. It had a {VisitInformation.ReasonForVisit}
+  b. The diagnosis was a {Diagnosis.Severity} {Diagnosis.DiagnosisDescription} at the {Diagnosis.AffectedSide}.
+  c. It went to the hospital's {VisitInformation.Department} department for {TreatmentPlan.Treatment[0].Procedure}, as a result, {TreatmentPlan.Treatment[0].Result}.
+  d. The doctor treated {PatientInformation.RelatedNotes.FavoriteToy} using {TreatmentPlan.Treatment[1].Method} and medicines.
+5. Summarize the story into a story book cover. The cover must have 1 title and 1 cover image. The title must be shorter than 43 characters.`
+}
+
 function copyText() {
   // Get the text field
   const copyText = document.getElementById('box3')
@@ -155,5 +127,5 @@ function copyText() {
   // Copy the text inside the text field
   navigator.clipboard.writeText(copyText.value)
   // Alert the copied text
-  alert('Clipboard to clipboard. You can now paste the texts into another application.')
+  alert('Copied to clipboard. You can now paste the texts into another application.')
 } 

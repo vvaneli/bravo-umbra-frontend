@@ -321,10 +321,14 @@
             <progress class="progress-bar" max="100" value="33"></progress>
             <h3 class="title is-5">Step 1: Task for AI</h3>
             <p><strong>Tell Gemini AI what you'd like it to do.</strong></p>
-            <p class="step-explain">Type a custom prompt, or use one of the examples provided.</p>
+            <p class="step-explain">Type a custom prompt, or use one of the examples provided. Select 'Send to Gemini AI' to continue.</p>
             <label for="box1-prmpt"></label>
             <textarea id="box1-prmpt" name="box1-prmpt" class="box" required
               placeholder="Type your instruction to Gemini AI…"></textarea>
+              <div class="">
+                <button onclick="example1()" class="button is-light">Example 1: Write a letter to the insurer</button>
+                <button onclick="example2()" class="button is-light">Example 2: Write a personalized story for the patient</button>
+              </div>
             <div class="buttons">
               <button onclick="clearContents()" class="button is-light">Reset</button>
               <button onclick="goToStep2(); send2api()" class="button is-dark has-text-white">Send to Gemini AI<span
@@ -368,7 +372,7 @@
             <textarea id="box3" name="box3" class="box"
               placeholder="Final texts (with redacted information restored) appear here" readonly></textarea>
             <div class="buttons">
-              <button onclick="goToStep1()" class="button is-light">Restart</button>
+              <button onclick="goToStep1(); clearContents()" class="button is-light">Restart</button>
               <button onclick="copyText()" class="button is-dark has-text-white">Copy <span class="material-symbols-outlined">
                 content_paste
                 </span></button>
