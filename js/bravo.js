@@ -1,3 +1,10 @@
+const pgPrev = document.querySelector('.pagination-previous')
+const pgList = document.querySelectorAll('.pagination-link')
+const umbraSteps = document.querySelector('#umbra-card-contents').children
+const step1 = document.getElementById('step1')
+const step2 = document.getElementById('step2')
+const step3 = document.getElementById('step3')
+
 //? Card behaviour: Patient Profile
 
 // const cardPatientProfile = document.getElementById('patient-profile')
@@ -40,10 +47,6 @@ show .card-close
 
 //? PAGE: ON LOAD
 
-const pgPrev = document.querySelector('.pagination-previous')
-const pgList = document.querySelectorAll('.pagination-link')
-const umbraSteps = document.querySelector('#umbra-card-contents').children
-
 function onPageLoad() {
   // append class .is-active to the first tab of every card
   const tabIsActive = document.querySelectorAll('nav.panel-tabs')
@@ -55,18 +58,25 @@ function onPageLoad() {
   for (let i = 0; i < tabDefault.length; i++) {
     tabDefault[i].style.display = 'contents'
   }
-  // umbra card pagination
-  pgPrev.classList.add('is-disabled')
-  pgList[0].classList.add('is-current')
-  pgList[0].classList.add('has-background-grey-dark')
-  for (let a = 1; a < pgList.length; a++) {
-    pgList[a].ariaLabel = `Go to step ${a + 1}`
-  }
+  // umbra card
+  step1.style.display = 'contents'
+  step2.style.display = 'none'
+  step3.style.display = 'none'
 
-  console.log(umbraSteps)
-  for (let s = 1; s < umbraSteps.length; s++) {
-    umbraSteps[s].style.display = 'none'
-  } 
+
+  // pgPrev.classList.add('is-disabled')
+  // pgList[0].classList.add('is-current')
+  // pgList[0].classList.add('has-background-grey-dark')
+  // for (let a = 1; a < pgList.length; a++) {
+  //   pgList[a].ariaLabel = `Go to step ${a + 1}`
+  // }
+
+
+
+  // console.log(umbraSteps)
+  // for (let s = 1; s < umbraSteps.length; s++) {
+  //   umbraSteps[s].style.display = 'none'
+  // } 
 }
 // Card toggle: hide the open arrow
 // cardPatientProfileToggleDown.classList.toggle('hide')
@@ -113,3 +123,37 @@ function pageBack() {
 function pageNext() {
 
 }
+
+function goToStep1() {
+  step1.style.display = 'contents'
+  step2.style.display = 'none'
+  step3.style.display = 'none'
+}
+
+function goToStep2() {
+  step1.style.display = 'none'
+  step2.style.display = 'contents'
+  step3.style.display = 'none'
+}
+
+function goToStep3() {
+  step1.style.display = 'none'
+  step2.style.display = 'none'
+  step3.style.display = 'contents'
+}
+
+function clearContents() {
+  document.getElementById('box1-prmpt').value = ''
+}
+
+function copyText() {
+  // Get the text field
+  const copyText = document.getElementById('box3')
+  // Select the text field
+  copyText.select()
+  copyText.setSelectionRange(0, 99999) // For mobile devices
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value)
+  // Alert the copied text
+  alert('Clipboard to clipboard. You can now paste the texts into another application.')
+} 

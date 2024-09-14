@@ -1,5 +1,9 @@
 /* FOR DATA FIELDS */
 
+.data {
+  font-weight: 600;
+}
+
 p.PatientID::before {
   content: "Patient ID: ";
 }
@@ -147,13 +151,6 @@ p.BillingCode::before {
   content: "Billing code: ";
 }
 
-/* BULMA CSS */
-
-.is-5 {
-  margin-top: 1.5em;
-  border-bottom: 1px dotted grey;
-}
-
 /* DIALOGFLOW */
 
 #chatbot {
@@ -162,19 +159,20 @@ p.BillingCode::before {
   right: 0;
   top: 0;
   /* box-shadow: rgba(9, 10, 12, 0.1) 0px 8px 16px -2px, rgba(9, 10, 12, 0.02) 0px 0px 0px 1px; */
-  --d-df-messenger-primary-color: rgb(67,70,84);;
-  --df-messenger-titlebar-background: rgb(64,70,84);
+  --d-df-messenger-primary-color: rgb(67, 70, 84);
+  ;
+  --df-messenger-titlebar-background: rgb(64, 70, 84);
   /* --df-messenger-titlebar-background: #4d4d4f; */
-  --df-messenger-focus-color: #ccdc40;
+  /* --df-messenger-focus-color: #ccdc40; */
   --df-messenger-chat-background: white;
-  --df-messenger-chat-scroll-button-background: rgb(67,70,84);
+  --df-messenger-chat-scroll-button-background: rgb(67, 70, 84);
   --df-messenger-titlebar-font-color: white;
   --df-messenger-titlebar-title-font-family: Arial, sans-serif;
   --df-messenger-titlebar-title-font-weight: 700;
   --df-messenger-titlebar-padding: 1.5em 2em 1em 2em;
   --df-messenger-titlebar-subtitle-font-color: whte;
   --df-messenger-titlebar-subtitle-font-family: Arial, sans-serif;
-  --df-messenger-titlebar-subtitle-font-size: 0.95em;
+  --df-messenger-titlebar-subtitle-font-size: 0.9em;
   --df-messenger-titlebar-subtitle-line-height: 1.8em;
   --df-messenger-message-font-family: Arial, sans-serif;
   /* --df-messenger-message-bot-font-color: #4d4d4f; */
@@ -182,17 +180,65 @@ p.BillingCode::before {
   --df-messenger-message-bot-writing-background: rgba(53, 121, 246, 0.1);
   /* --df-messenger-message-user-font-color: #4d4d4f; */
   --df-messenger-input-background: rgba(113, 200, 179, 0.2);
-  --df-messenger-message-user-background: rgba(113, 200, 179, 0.2);
+  --df-messenger-message-user-background: RGBA(204, 220, 64, 0.2);
   --df-messenger-input-font-family: Arial, sans-serif;
   --df-messenger-input-padding: 10px 0px 10px 10px;
   --df-messenger-input-background: white;
-  --df-messenger-input-box-focus-border: 3px solid rgb(67,70,84);
-  --df-messenger-send-icon-color: rgb(67,70,84);
-  --df-messenger-send-icon-color-hover: rgb(67,70,84);
-  --df-messenger-send-icon-color-active: rgb(67,70,84);
+  --df-messenger-input-box-focus-border: 3px solid rgb(67, 70, 84);
+  --df-messenger-send-icon-color: rgb(67, 70, 84);
+  --df-messenger-send-icon-color-hover: rgb(67, 70, 84);
+  --df-messenger-send-icon-color-active: rgb(67, 70, 84);
 }
 
-/* UMBRA REDACT */
+/* CARDS */
+
+.half-width {
+  width: 50%;
+}
+
+/* CARD TABS */
+
+.panel-tabs {
+  margin-bottom: 1em;
+}
+
+.panel-tabs a {
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+}
+
+/* CARD CONTENTS */
+
+.panel-block {
+  font-weight: 400;
+}
+
+.tab-panel,
+.hide {
+  display: none;
+}
+
+/* CARD PAGINATION */
+/* .is-current {
+  border: 0;
+} */
+
+/* CARD: CONSULTATION */
+
+.consultation .card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.consultation .card-footer button {
+  margin: 1.8em 1em 1em 1em;
+}
+
+.consultation .is-5 {
+  margin-top: 1.5em;
+  border-bottom: 1px dotted grey;
+}
+
+/* CARD: UMBRA */
 
 .highlight {
   /* background-color: #ccdc40; */
@@ -223,7 +269,22 @@ p.BillingCode::before {
 }
 
 textarea {
+  box-sizing: border-box;
+  min-height: 10em;
   width: 100%;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea#box1-prmpt:focus {
+  border: 2px solid rgb(67, 70, 84);
+}
+
+#box2,
+#box3 {
+  resize: none;
 }
 
 .container {
@@ -233,7 +294,7 @@ textarea {
 }
 
 .box {
-  width: 60%;
+  /* width: 60%; */
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #ccc;
@@ -256,7 +317,7 @@ textarea {
 .buttons {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  /* width: 60%; */
   margin: 10px 0;
 }
 
@@ -269,6 +330,69 @@ textarea {
     transform: rotate(360deg);
   }
 }
+
+#umbra-card {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
+
+#umbra-card .description {
+  padding-bottom: 0;
+}
+
+#umbra-card nav.card-footer {
+  width: 100%;
+  order: 3;
+  padding: 1.5em;
+  margin: auto 0;
+}
+
+#umbra-card-contents {
+  padding-top: 0;
+}
+
+.step-explain {
+  margin: 1em 0 2em 0;
+  font-style: italic;
+  font-size: 0.9em;
+  line-height: 1em;
+}
+
+button .material-symbols-outlined,
+button .material-symbols-sharp {
+  padding-left: 0.3em;
+  opacity: 0.8;
+}
+
+/* .progress-bar, */
+progress[value] {
+  width: 100%;
+  height: 8px;
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  /* background-color: rgba(175, 175, 175, 0.7); */
+  margin: 2em 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #ccdc40;
+  border-radius: 4px;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: #ccdc40;
+}
+
 
 /* PAGE */
 
@@ -290,11 +414,30 @@ a {
   color: #2354ad;
 }
 
+.show {
+  display: contents;
+}
+
+.alert-banner {
+  display: block;
+  width: 100%;
+  background-color: #ccdc40;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  text-align: center;
+  z-index: 1;
+  font-style: italic;
+}
+
+/* PAGE FOOTER */
+
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: rgba(77,77,79,0.7);
-  color:rgba(255,255,255,0.8);
+  background-color: rgba(77, 77, 79, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1em;
 }
 
@@ -305,94 +448,4 @@ a {
 .footer a {
   text-decoration: underline;
   color: inherit;
-}
-
-.show {
-  display: contents;
-}
-
-.data {
-  font-weight: 600;
-}
-
-.alert-banner {
-  display: block;
-  width: 100%;
-  background-color: #ccdc40;
-  position: fixed;
-  top:0;
-  left:0;
-  height: 1.5em;
-  text-align: center;
-  z-index: 1;
-  font-style: italic;
-}
-
-.alert-banner .material-symbols-outlined {
-height: 1em;
-width: 10px;
-/* color: red; */
-}
-
-/* CARDS */
-
-.half-width {
-  width: 50%;
-}
-
-/* CARD TABS */
-
-.panel-tabs {
-  margin-bottom: 1em;
-}
-
-.panel-tabs a {
-  border-bottom: 3px solid rgba(0, 0, 0, 0);
-}
-
-/* CARD CONTENTS */
-
-.panel-block {
-  font-weight: 400;
-}
-
-.tab-panel,
-.hide {
-  display: none;
-}
-
-.consultation .card-footer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.consultation .card-footer button {
-  margin: 1.8em 1em 1em 1em;
-}
-
-#umbra-card {
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-}
-
-#umbra-card .description {
-padding-bottom: 0;
-}
-
-#umbra-card nav.card-footer {
-  width: 100%;
-  order: 3;
-  padding: 1.5em;
-  margin: auto 0;
-}
-
-#umbra-card-contents {
-  padding-top: 0;
-}
-
-/* CARD PAGINATION */
-
-.is-current {
-  border: 0;
 }
