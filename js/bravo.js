@@ -19,33 +19,24 @@ function onPageLoad() {
   for (let i = 0; i < tabDefault.length; i++) {
     tabDefault[i].style.display = 'contents'
   }
-  // umbra card
+  // umbra card show step 1
   step1.style.display = 'contents'
   step2.style.display = 'none'
   step3.style.display = 'none'
-
-
-  // pgPrev.classList.add('is-disabled')
-  // pgList[0].classList.add('is-current')
-  // pgList[0].classList.add('has-background-grey-dark')
-  // for (let a = 1; a < pgList.length; a++) {
-  //   pgList[a].ariaLabel = `Go to step ${a + 1}`
-  // }
-
-
-
-  // console.log(umbraSteps)
-  // for (let s = 1; s < umbraSteps.length; s++) {
-  //   umbraSteps[s].style.display = 'none'
-  // } 
 }
-// Card toggle: hide the open arrow
-// cardPatientProfileToggleDown.classList.toggle('hide')
+
+//! CARDS: OPEN & CLOSE
 
 function cardToggle(e) {
-  e.classList.toggle('hide')
-  // cardPatientProfileToggleUp.classList.toggle('hide')
-  // cardPatientProfileToggleDown.classList.toggle('show')
+  if (e.innerHTML !== 'keyboard_arrow_down') {
+    e.innerHTML = 'keyboard_arrow_down'
+    e.parentElement.nextElementSibling.style.display = 'none'
+    e.parentElement.parentElement.style.height = '89px'
+  } else {
+    e.innerHTML = 'keyboard_arrow_up'
+    e.parentElement.nextElementSibling.style.display = 'contents'
+    e.parentElement.parentElement.style.height = 'auto'
+  }
 }
 
 //! CARDS: TAB
@@ -93,7 +84,8 @@ function clearContents() {
   document.getElementById('box1-prmpt').value = ''
 }
 
-function example1 (){
+function example1() {
+  // JSON fields from file 'dummy-health-data.json'
   box1.value = `Write a letter dated with today's date to {BillingInformation.InsuranceProvider} about the patient {PatientInformation.FirstName} {PatientInformation.MiddleName} {PatientInformation.LastName}; patient ID {PatientInformation.PatientID}; insurance policy number {BillingInformation.PolicyNumber}.
 1. The patient visited the hospital on {VisitInformation.VisitDate} due to a {VisitInformation.ReasonForVisit}; visit ID {VisitInformation.VisitID}.
 2. The diagnosis was a {Diagnosis.DiagnosisDescription} at the {Diagnosis.AffectedSide}, with {Diagnosis.Severity} severity; the diagnosis code is {Diagnosis.DiagnosisCode}.
@@ -105,7 +97,8 @@ function example1 (){
 5. Sender of the letter is {VisitInformation.PrimaryPhysician}, {VisitInformation.Department} Department, at the Bravo Children’s Hospital`
 }
 
-function example2 (){
+function example2() {
+  // JSON fields from files 'dummy-health-data.json' and 'dummy-relation-data.json'
   box1.value = `Write a story for a {PatientInformation.Age}-year-old child about {PatientInformation.RelatedNotes.FavoriteToy}.
 1. Use the story arc of a hero's journey.
 2. The characters in the story are gender-neutral.

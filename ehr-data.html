@@ -7,8 +7,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,1,0" />
-    <link rel="stylesheet"
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,1,0" />
+  <link rel="stylesheet"
     href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
   <link rel="stylesheet" href="css/styles.css">
   <!-- Dialogflow -->
@@ -35,7 +36,6 @@
       </div>
       <div class="navbar-menu">
         <div class="navbar-start">
-          <!-- <a href="#" class="navbar-item"><span class="material-symbols-outlined">home</span><span class="text">Home</span></a> -->
           <a href="#" class="navbar-item"><span class="material-symbols-outlined">patient_list</span><span
               class="text">Patients</span></a>
           <a href="#" class="navbar-item"><span class="material-symbols-outlined">add_box</span><span
@@ -63,8 +63,8 @@
     <main class="column is-three-quarters">
 
       <!-- BLOCK 1 PATIENT PROFILE -->
-      <!-- 1A (Identity): START -->
-      <section class="hero is-primary is-flex ml-3 mb-5">
+      <!-- 1A (Photo banner): START -->
+      <section class="hero is-primary is-flex mb-5">
         <div class="hero-body container">
           <figure class="image is-128x128 mb-3">
             <img class="is-rounded" src="img/patient-profile-photo.jpg" alt="photo of patient" />
@@ -74,18 +74,14 @@
         </div>
       </section>
       <!-- 1A: END -->
-      <div class="columns ml-3">
+      <div class="columns">
         <!-- 1B (Patient profile): START -->
-        <article id="patient-profile" class="card panel is-primary half-width mr-3">
+        <article id="patient-profile" class="card panel is-primary half-width ml-3 mr-1">
           <header class="card-header panel-heading">
             <h2 class="card-header-title ">Patient Profile</h2>
-            <button onclick="cardToggle(this)" class="card-toggle card-header-icon" aria-label="more options">
-              <span class="card-open icon material-symbols-outlined">
-                keyboard_arrow_down
-              </span>
-              <span class="card-close icon material-symbols-outlined">
-                keyboard_arrow_up
-              </span>
+            <button onclick="cardToggle(this)" class="card-toggle card-header-icon material-symbols-outlined"
+              aria-label="toggle section contents">
+              keyboard_arrow_up
             </button>
           </header>
           <section id="patient-profile-card-body">
@@ -118,18 +114,14 @@
             </div>
           </section>
         </article>
-        <!-- 1A: END -->
-        <!-- 1B (Medical profile)): START -->
-        <article id="medical-profile" class="card panel is-primary half-width mr-3">
+        <!-- 1B: END -->
+        <!-- 1C (Medical profile): START -->
+        <article id="medical-profile" class="card panel is-primary half-width ml-3 mr-3">
           <header class="card-header panel-heading">
             <h2 class="card-header-title ">Medical Profile</h2>
-            <button onclick="cardToggle(this)" class="card-toggle card-header-icon" aria-label="more options">
-              <span class="card-open icon material-symbols-outlined">
-                keyboard_arrow_down
-              </span>
-              <span class="card-close icon material-symbols-outlined">
-                keyboard_arrow_up
-              </span>
+            <button onclick="cardToggle(this)" class="card-toggle card-header-icon material-symbols-outlined"
+              aria-label="toggle section contents">
+              keyboard_arrow_up
             </button>
           </header>
           <section id="medical-profile-card-body">
@@ -138,52 +130,57 @@
               <a onClick="openPanel('medicalProfileTab2', 'medicalProfile', this)" class="tab">History</a>
             </nav>
             <div class="panel-block column">
-              <section id="medicalProfileTab1" class="column medicalProfile tab-panel tab-default">
-                <!-- <h3 class="title is-3">Current</h3> -->
+              <section id="medicalProfileTab1" class="medicalProfile tab-panel tab-default">
                 <!-- JSON: MedicalHistory -->
-                <h3 class="title is-4">Current Medications</h3>
-                <p class="CurrentMedications"><span class="data">Ibuprofen 200mg</span></p>
-                <br />
-                <h3 class="title is-4">Allergies</h3>
-                <p class="Allergies-Allergen"><span class="data">Peanuts</span></p>
-                <p class="Allergies-Reaction"><span class="data">Hives</span></p>
-                <p class="Allergies-Allergen"><span class="data">Penicillin</span></p>
-                <p class="Allergies-Reaction"><span class="data">Rash</span></p>
-                <button class="button is-light">Edit</button>
+                <div class="columns">
+                  <div class="column">
+                    <h3 class="title is-4">Current Medications</h3>
+                    <p class="CurrentMedications"><span class="data">Ibuprofen 200mg</span></p>
+                    <!-- <br /> -->
+                  </div>
+                  <div class="column">
+                    <h3 class="title is-4">Allergies</h3>
+                    <p class="Allergies-Allergen"><span class="data">Peanuts</span></p>
+                    <p class="Allergies-Reaction"><span class="data">Hives</span></p>
+                    <p class="Allergies-Allergen"><span class="data">Penicillin</span></p>
+                    <p class="Allergies-Reaction"><span class="data">Rash</span></p>
+                    <button class="button is-light">Edit</button>
+                  </div>
+                </div>
               </section>
-              <section id="medicalProfileTab2" class="column medicalProfile tab-panel">
-                <!-- <section class="section tab json medical-history"> -->
-                <!-- <h3 class="title is-3">History</h3> -->
+              <section id="medicalProfileTab2" class="medicalProfile tab-panel">
                 <!-- JSON: MedicalHistory -->
-                <h3 class="title is-4">Past Illnesses</h3>
-                <p class="PastIllnesses-Year"><span class="data">2022</span></p>
-                <p class="PastIllnesses-Illness"><span class="data">Chickenpox</span></p>
-                <button class="button is-light">More</button>
-                <h3 class="title is-4">Family History</h3>
-                <p class="FamilyHistory-Relation"><span class="data">Father</span></p>
-                <p class="FamilyHistory-Condition"><span class="data">Hypertension</span></p>
-                <p class="FamilyHistory-Relation"><span class="data">Mother</span></p>
-                <p class="FamilyHistory-Condition"><span class="data">Asthma</span></p>
-                <button class="button is-light">Edit</button>
+                <div class="columns">
+                  <div class="column">
+                    <h3 class="title is-4">Past Illnesses</h3>
+                    <p class="PastIllnesses-Year"><span class="data">2022</span></p>
+                    <p class="PastIllnesses-Illness"><span class="data">Chickenpox</span></p>
+                    <button class="button is-light">More</button>
+                  </div>
+                  <div class="column">
+                    <h3 class="title is-4">Family History</h3>
+                    <p class="FamilyHistory-Relation"><span class="data">Father</span></p>
+                    <p class="FamilyHistory-Condition"><span class="data">Hypertension</span></p>
+                    <p class="FamilyHistory-Relation"><span class="data">Mother</span></p>
+                    <p class="FamilyHistory-Condition"><span class="data">Asthma</span></p>
+                    <button class="button is-light">Edit</button>
+                  </div>
+                </div>
               </section>
             </div>
           </section>
         </article>
-        <!-- 1B MEDICAL PROFILE: END -->
+        <!-- 1C: END -->
       </div>
       <!-- BLOCK 1: END -->
 
       <!-- BLOCK 2 CONSULTATION: START -->
-      <article class="card panel is-link ml-3 mb-3">
+      <article class="card panel is-link mb-6">
         <header class="card-header panel-heading">
           <h2 class="card-header-title has-text-white">Consultations</h2>
-          <button class="card-header-icon" aria-label="more options">
-            <span class="card-open icon material-symbols-outlined">
-              keyboard_arrow_down
-            </span>
-            <span class="card-close icon material-symbols-outlined">
-              keyboard_arrow_up
-            </span>
+          <button onclick="cardToggle(this)" class="card-toggle card-header-icon material-symbols-outlined"
+            aria-label="toggle section contents">
+            keyboard_arrow_up
           </button>
         </header>
         <section id="medical-profile-card-body">
@@ -193,7 +190,7 @@
             <a onClick="openPanel('consultationTab3', 'consultation', this)" class="tab">Past</a>
           </nav>
           <div class="panel-block column">
-            <section id="consultationTab1" class="columns consultation tab-panel tab-default">
+            <section id="consultationTab1" class="consultation tab-panel tab-default">
               <div class="columns">
                 <div class="column">
                   <h3 class="title is-4">Consultation</h3>
@@ -245,6 +242,7 @@
                   <p class="BillingCode"><span class="data">99203</span></p>
                   <button class="button is-light">Edit</button>
                 </div>
+              </div>
             </section>
             <section id="consultationTab2" class="column consultation tab-panel">
               <h3 class="title is-4 FollowUp">Upcoming appointments</h3>
@@ -271,121 +269,100 @@
       <!-- BLOCK 2: END -->
 
       <!-- BLOCK 3 UMBRA: START -->
-      <!-- <div class="columns ml-3 mr-3"> -->
-      <article id="umbra-card" class="card panel ml-3">
+      <article id="umbra-card" class="card panel mb-5">
         <header class="card-header panel-heading">
           <h2 class="card-header-title has-text-white">Umbra</h2>
-          <button class="card-header-icon" aria-label="more options">
-            <span class="card-open icon material-symbols-outlined">
-              keyboard_arrow_down
-            </span>
-            <span class="card-close icon material-symbols-outlined">
-              keyboard_arrow_up
-            </span>
+          <button onclick="cardToggle(this)" class="card-toggle card-header-icon material-symbols-outlined"
+            aria-label="toggle section contents">
+            keyboard_arrow_up
           </button>
         </header>
-        <section class="section description">
-          <p><strong>Use Gemini AI in the Cloud without disclosing Personally Identifiable Information</strong></p>
-          <!-- <hr /> -->
-        </section>
-        <!-- <nav class="pagination is-centered card-footer" role="navigation" aria-label="pagination">
-          <a onClick="pageBack('', '', this)" class="pagination-previous" title="Step 1"><span
-              class="material-symbols-outlined">
-              arrow_back
-            </span></a>
-          <a onClick="pageNext('', '', this)" class="pagination-next"><span class="material-symbols-outlined">
-              arrow_forward
-            </span></a>
-          <ul class="pagination-list">
-            <li>
-              <a class="pagination-link" aria-label="step 1" aria-current="step">1</a>
-            </li>
-            <li>
-              <a href="#" class="pagination-link" aria-label="step 3">2</a>
-            </li>
-            <li>
-              <a href="#" class="pagination-link" aria-label="step 3">3</a>
-            </li>
-            <li>
-              <a href="#" class="pagination-link" aria-label="step 4">4</a>
-            </li>
-            <li>
-              <a href="#" class="pagination-link" aria-label="step 5">5</a>
-            </li>
-          </ul>
-        </nav> -->
-        <section class="section tab column" id="umbra-card-contents">
-          <!-- Umbra Step 1 -->
-          <div id="step1">
-            <!-- <div class="progress-bar"></div> -->
-            <progress class="progress-bar" max="100" value="33"></progress>
-            <h3 class="title is-5">Step 1: Task for AI</h3>
-            <p><strong>Tell Gemini AI what you'd like it to do.</strong></p>
-            <p class="step-explain">Type a custom prompt, or use one of the examples provided. Select 'Send to Gemini AI' to continue.</p>
-            <label for="box1-prmpt"></label>
-            <textarea id="box1-prmpt" name="box1-prmpt" class="box" required
-              placeholder="Type your instruction to Gemini AI…"></textarea>
+        <div>
+          <section class="section description">
+            <p><strong>Use Gemini AI in the Cloud without disclosing Personally Identifiable Information</strong></p>
+          </section>
+          <section class="section tab column" id="umbra-card-contents">
+            <!-- Umbra Step 1 -->
+            <div id="step1">
+              <!-- <div class="progress-bar"></div> -->
+              <progress class="progress-bar" max="100" value="33"></progress>
+              <h3 class="title is-5">Step 1: Task for AI</h3>
+              <p><strong>Tell Gemini AI what you'd like it to do.</strong></p>
+              <p class="step-explain">Type a custom prompt, or select one of the examples provided. Select 'Send to
+                Gemini
+                AI' to continue.</p>
+              <label for="box1-prmpt"></label>
+              <textarea id="box1-prmpt" name="box1-prmpt" class="box" required
+                placeholder="Type your instruction to Gemini AI…"></textarea>
               <div class="">
-                <button onclick="example1()" class="button is-light">Example 1: Write a letter to the insurer</button>
-                <button onclick="example2()" class="button is-light">Example 2: Write a personalized story for the patient</button>
+                <button onclick="example1()" class="button is-info is-rounded is-light">Example 1: Write a letter to the
+                  insurer</button>
+                <button onclick="example2()" class="button is-info is-rounded is-light">Example 2: Write a personalized
+                  story for the
+                  patient</button>
               </div>
-            <div class="buttons">
-              <button onclick="clearContents()" class="button is-light">Reset</button>
-              <button onclick="goToStep2(); send2api()" class="button is-dark has-text-white">Send to Gemini AI<span
-                  class="material-symbols-sharp">
-                  send
-                </span>
-              </button>
-            </div>
-            <small><a
+              <div class="buttons">
+                <button onclick="clearContents()" class="button is-light">Reset</button>
+                <button onclick="goToStep2(); send2api()" class="button is-dark has-text-white">Send to Gemini AI<span
+                    class="material-symbols-sharp">
+                    send
+                  </span>
+                </button>
+              </div>
+              <!-- <small><a
                 href="https://support.google.com/gemini/answer/13594961?visit_id=638588064666691455-2002261725&p=privacy_notice&rd=1#privacy_notice">Your
                 privacy and Gemini AI <span class="material-symbols-outlined icon-small">
                   open_in_new
-                </span></a></small>
-          </div>
-          <!-- Umbra Step 2 -->
-          <div class="column step" id="step2">
-            <!-- <div class="progress-bar"></div> -->
-            <progress class="progress-bar" max="100" value="66"></progress>
-            <h3 class="title is-5">Step 2: Response from AI</h3>
-            <p><strong>Task result with PII redacted.</strong></p>
-            <p class="step-explain">Select &lsquo;Restore PII&rsquo; to accept this result, or &lsquo;Back&rsquo; to adjust your prompt to try again.</p>
-            <label for="box2"></label>
-            <textarea id="box2" name="box2" class="box" placeholder="Response from AI appears here"
-              readonly></textarea>
-            <!-- <p>Click 'Next' to restore redacted information.</p> -->
-            <div class="buttons">
-              <button onclick="goToStep1()" class="button is-light">Back</button>
-              <button onclick="goToStep3(); replaceMarkers()" class="button is-dark has-text-white">Restore PII <span class="material-symbols-sharp">
-                person_add
-                </span></button>
+                </span></a></small> -->
             </div>
-          </div>
-          <!-- Umbra Step 3 -->
-          <div class="column step" id="step3">
-            <!-- <div class="progress-bar"></div> -->
-            <progress class="progress-bar" max="100" value="100"></progress>
-            <h3 class="title is-5">Step 3: Final texts</h3>
-            <p><strong>Task result with PII restored.</strong></p>
-            <p class="step-explain">Select &lsquo;Copy&rsquo; to copy the text below to clipboard, or &lsquo;Restart&rsquo; to return to step 1.</p>
-            <label for="box3"></label>
-            <textarea id="box3" name="box3" class="box"
-              placeholder="Final texts (with redacted information restored) appear here" readonly></textarea>
-            <div class="buttons">
-              <button onclick="goToStep1(); clearContents()" class="button is-light">Restart</button>
-              <button onclick="copyText()" class="button is-dark has-text-white">Copy <span class="material-symbols-outlined">
-                content_paste
-                </span></button>
+            <!-- Umbra Step 2 -->
+            <div class="column step" id="step2">
+              <!-- <div class="progress-bar"></div> -->
+              <progress class="progress-bar" max="100" value="66"></progress>
+              <h3 class="title is-5">Step 2: Response from AI</h3>
+              <p><strong>Task result with PII redacted.</strong></p>
+              <p class="step-explain">Select &lsquo;Restore PII&rsquo; to accept this result, or &lsquo;Back&rsquo; to
+                adjust your prompt to try again.</p>
+              <label for="box2"></label>
+              <textarea id="box2" name="box2" class="box" placeholder="Response from AI appears here"
+                readonly></textarea>
+              <!-- <p>Click 'Next' to restore redacted information.</p> -->
+              <div class="buttons">
+                <button onclick="goToStep1()" class="button is-light">Back</button>
+                <button onclick="goToStep3(); replaceMarkers()" class="button is-dark has-text-white">Restore PII <span
+                    class="material-symbols-sharp">
+                    person_add
+                  </span></button>
+              </div>
             </div>
-          </div>
-        </section>
-
+            <!-- Umbra Step 3 -->
+            <div class="column step" id="step3">
+              <!-- <div class="progress-bar"></div> -->
+              <progress class="progress-bar" max="100" value="100"></progress>
+              <h3 class="title is-5">Step 3: Final texts</h3>
+              <p><strong>Task result with PII restored.</strong></p>
+              <p class="step-explain">Select &lsquo;Copy&rsquo; to copy the text below to clipboard, or
+                &lsquo;Restart&rsquo; to return to step 1.</p>
+              <label for="box3"></label>
+              <textarea id="box3" name="box3" class="box"
+                placeholder="Final texts (with redacted information restored) appear here" readonly></textarea>
+              <div class="buttons">
+                <button onclick="goToStep1(); clearContents()" class="button is-light">Restart</button>
+                <button onclick="copyText()" class="button is-dark has-text-white">Copy <span
+                    class="material-symbols-outlined">
+                    content_paste
+                  </span></button>
+              </div>
+            </div>
+          </section>
+        </div>
       </article>
       <!-- </div> -->
 
       <!-- BLOCK 3: END -->
     </main>
     <!-- CHAT BLOCK: START -->
+    <!-- https://cloud.google.com/dialogflow/cx/docs/concept/integration/dialogflow-messenger -->
     <aside id="chatbot" class="column is-one-quarter">
       <!-- DIALOGFLOW CX – REPLACE CHATBOT 'project-id' AND 'agent-id' -->
       <df-messenger location="eu" project-id="" agent-id="" language-code="en" max-query-length="-1">
@@ -398,7 +375,7 @@
     </aside>
     <!-- CHAT BLOCK: END -->
   </div>
-  <!-- </div> -->
+
   <footer class="footer column is-three-quarters content has-text-centered">
     <p><small><em>This is a demonstration. It does not depict a real patient, real data, or a real
           hospital.</em></small></p>
@@ -413,6 +390,5 @@
   </footer>
 </body>
 <script src="js/bravo.js"></script>
-<!-- <script src="js/umbra.js"></script> -->
 
 </html>
