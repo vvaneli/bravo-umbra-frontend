@@ -389,16 +389,25 @@ body {
 }
 
 button {
-  /* margin-top: 1em;
-  margin-bottom: 1em; */
   margin: 1em 0 1.5em 0;
-  /* padding: 10px 20px; */
   font-size: 16px;
   cursor: pointer;
 }
 
 a {
   color: #2354ad;
+}
+
+/* .navbar-brand .navbar-item {
+  padding: 0;
+  width: 52px;
+} */
+
+.navbar-brand img {
+  /* width: 50px; */
+  height: 48px;
+  /* padding: 0 0 1em 0; */
+  margin-right: 0.7em;
 }
 
 .show {
@@ -426,13 +435,24 @@ a {
   background-color: rgba(77, 77, 79, 0.7);
   color: rgba(255, 255, 255, 0.8);
   line-height: 1em;
+  padding: 1em;
+  margin: 0;
 }
 
 .footer hr {
   opacity: 0.4;
+  margin: 0 0 1em 0;
 }
 
 .footer a {
   text-decoration: underline;
   color: inherit;
+}
+
+/* MEDIA Q */
+
+@media screen and (max-width: 1370px) {
+  .navbar-menu .text {
+    display: none;
+  }
 }
